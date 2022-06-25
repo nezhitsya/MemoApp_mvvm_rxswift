@@ -1,0 +1,38 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+install! 'cocoapods', :warn_for_multiple_pod_sources => false
+
+def commonPods
+  pod 'RxCocoa'
+  pod 'RxSwift'
+  pod 'RxSwiftExt'
+  pod 'RxOptional'
+  pod 'RxDataSources'
+  pod 'RxGesture'
+  pod 'RxKeyboard'
+  pod 'RxViewController'
+  pod 'SwiftyBeaver'
+  pod 'SwiftyUserDefaults'
+end
+
+def uiPods
+  pod 'SnapKit'
+  pod 'BonMot'
+  pod 'lottie-ios'
+end
+
+def debugPods
+  pod 'SwiftLint'
+end
+
+target 'MemoApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MemoApp
+  commonPods
+  debugPods
+  uiPods
+
+end

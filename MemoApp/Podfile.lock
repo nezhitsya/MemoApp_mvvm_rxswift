@@ -1,0 +1,95 @@
+PODS:
+  - BonMot (6.1.1)
+  - Differentiator (5.0.0)
+  - lottie-ios (3.3.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxGesture (4.0.4):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxKeyboard (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - RxSwiftExt (6.0.1):
+    - RxSwiftExt/Core (= 6.0.1)
+    - RxSwiftExt/RxCocoa (= 6.0.1)
+  - RxSwiftExt/Core (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.0.1):
+    - RxCocoa (~> 6.0)
+    - RxSwiftExt/Core
+  - RxViewController (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - SnapKit (5.6.0)
+  - SwiftLint (0.47.1)
+  - SwiftyBeaver (1.9.6)
+  - SwiftyUserDefaults (5.3.0)
+
+DEPENDENCIES:
+  - BonMot
+  - lottie-ios
+  - RxCocoa
+  - RxDataSources
+  - RxGesture
+  - RxKeyboard
+  - RxOptional
+  - RxSwift
+  - RxSwiftExt
+  - RxViewController
+  - SnapKit
+  - SwiftLint
+  - SwiftyBeaver
+  - SwiftyUserDefaults
+
+SPEC REPOS:
+  trunk:
+    - BonMot
+    - Differentiator
+    - lottie-ios
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxKeyboard
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - RxViewController
+    - SnapKit
+    - SwiftLint
+    - SwiftyBeaver
+    - SwiftyUserDefaults
+
+SPEC CHECKSUMS:
+  BonMot: 42c7134bab1da1d1d8805b02113635c12f0200cc
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
+  RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
+  RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  SwiftyBeaver: c8241b4745aa269a78ca5a022532c6915e948536
+  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
+
+PODFILE CHECKSUM: 27c5b18a9d8bba84f49aad9c4a7b100af1d3934c
+
+COCOAPODS: 1.11.2
