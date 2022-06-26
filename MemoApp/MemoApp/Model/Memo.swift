@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import RxDataSources
 
-struct Memo: Equatable {
+struct Memo: Equatable, IdentifiableType {
     var content: String
     var date: Date
-    var category: String
+    var identity: String
     
     init(content: String, date: Date = Date()) {
         self.content = content
         self.date = date
-        self.category = "\(date.timeIntervalSinceReferenceDate)"
+        self.identity = "\(date.timeIntervalSinceReferenceDate)"
     }
     
     init(original: Memo, updatedContent: String) {

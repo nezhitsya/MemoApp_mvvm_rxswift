@@ -28,9 +28,7 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .disposed(by: rx.disposeBag)
         
         viewModel.memoList
-            .bind(to: listTable.rx.items(cellIdentifier: "MemoCell")) { row, memo, cell in
-                cell.textLabel?.text = memo.content
-            }
+            .bind(to: listTable.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: rx.disposeBag)
         
         addButton.rx.action = viewModel.createAction()
@@ -43,6 +41,9 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .bind(to: viewModel.detailAction.inputs)
             .disposed(by: rx.disposeBag)
         
+        listTable.rx.modelDeleted(Memo.self)
+            .bind(to: viewModel.deleteAction.inputs)
+            .disposed(by: rx.disposeBag)
     }
 
 }
