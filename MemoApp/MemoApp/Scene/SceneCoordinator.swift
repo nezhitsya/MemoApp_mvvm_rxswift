@@ -9,8 +9,14 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension UIViewController {
+    var sceneViewController: UIViewController {
+        return self.children.first ?? self
+    }
+}
+
 class SceneCoordinator: SceneCoordinatorType {
-    private let bad = DisposeBag()
+    private let bag = DisposeBag()
     private var window: UIWindow
     private var currentViewController: UIViewController
     
@@ -26,7 +32,7 @@ class SceneCoordinator: SceneCoordinatorType {
         
         switch style {
         case .root:
-            currentViewController = target
+            currentViewController = target.sceneViewController
             window.rootViewController = target
             subject.onCompleted()
         case .push:
@@ -35,8 +41,14 @@ class SceneCoordinator: SceneCoordinatorType {
                 break
             }
             
+            nav.rx.willShow
+                .subscribe(onNext: { [unowned self] event in
+                    self.currentViewController = event.viewController.sceneViewController
+                })
+                .disposed(by: bag)
+            
             nav.pushViewController(target, animated: animated)
-            currentViewController = target
+            currentViewController = target.sceneViewController
             
             subject.onCompleted()
         case .modal:
@@ -44,7 +56,7 @@ class SceneCoordinator: SceneCoordinatorType {
                 subject.onCompleted()
             }
             
-            currentViewController = target
+            currentViewController = target.sceneViewController
         }
         
         return subject.ignoreElements().asCompletable()
@@ -55,7 +67,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return Completable.create { [unowned self] completable in
             if let presentViewController = self.currentViewController.presentingViewController {
                 self.currentViewController.dismiss(animated: animated) {
-                    self.currentViewController = presentViewController
+                    self.currentViewController = presentViewController.sceneViewController
                     completable(.completed)
                 }
             } else if let nav = self.currentViewController.navigationController {

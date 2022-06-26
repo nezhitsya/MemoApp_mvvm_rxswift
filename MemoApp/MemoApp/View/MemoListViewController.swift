@@ -34,6 +34,15 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .disposed(by: rx.disposeBag)
         
         addButton.rx.action = viewModel.createAction()
+        
+        Observable.zip(listTable.rx.modelSelected(Memo.self), listTable.rx.itemSelected)
+            .do(onNext: { [unowned self] (_, indexPath) in
+                self.listTable.deselectRow(at: indexPath, animated: true)
+            })
+            .map {$0.0}
+            .bind(to: viewModel.detailAction.inputs)
+            .disposed(by: rx.disposeBag)
+        
     }
 
 }
