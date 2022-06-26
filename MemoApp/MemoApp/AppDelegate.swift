@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let storage = MemoStorage()
+//        let storage = MemoStorage()
+        let storage = CoreDataStorage(modelName: "Memo")
         let coordinator = SceneCoordinator(window: window!)
         let memoListViewModel = MemoListViewModel(title: "Memo", sceneCoordinator: coordinator, storage: storage)
         let memoListScene = Scene.list(memoListViewModel)
