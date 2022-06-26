@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-protocol SceneCoordinatortype {
+protocol SceneCoordinatorType {
     @discardableResult
     func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) -> Completable
     

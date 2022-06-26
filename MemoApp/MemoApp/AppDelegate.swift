@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let storage = MemoStorage()
+        let coordinator = SceneCoordinator(window: window!)
+        let memoListViewModel = MemoListViewModel(title: "Memo", sceneCoordinator: coordinator, storage: storage)
+        let memoListScene = Scene.list(memoListViewModel)
+        
+        coordinator.transition(to: memoListScene, using: .root, animated: false)
+        
         return true
     }
 

@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SceneCoordinator: SceneCoordinatortype {
+class SceneCoordinator: SceneCoordinatorType {
     private let bad = DisposeBag()
     private var window: UIWindow
     private var currentViewController: UIViewController

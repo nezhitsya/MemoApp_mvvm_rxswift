@@ -5,6 +5,8 @@ PODS:
   - BonMot (6.1.1)
   - Differentiator (5.0.0)
   - lottie-ios (3.3.0)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -47,6 +49,7 @@ DEPENDENCIES:
   - Action
   - BonMot
   - lottie-ios
+  - "NSObject+Rx"
   - RxCocoa
   - RxCoreData
   - RxDataSources
@@ -67,6 +70,7 @@ SPEC REPOS:
     - BonMot
     - Differentiator
     - lottie-ios
+    - "NSObject+Rx"
     - RxCocoa
     - RxCoreData
     - RxDataSources
@@ -87,6 +91,7 @@ SPEC CHECKSUMS:
   BonMot: 42c7134bab1da1d1d8805b02113635c12f0200cc
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxCoreData: 4c1686b30499c05b90104eec1a879f41aa1a0a65
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
@@ -102,6 +107,6 @@ SPEC CHECKSUMS:
   SwiftyBeaver: c8241b4745aa269a78ca5a022532c6915e948536
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
 
-PODFILE CHECKSUM: eb3d92840f67bae5a58ac2101e209ba3f4e5b9ef
+PODFILE CHECKSUM: 808a4e37ae43c684c1aa2571adcadf45782af4a8
 
 COCOAPODS: 1.11.2

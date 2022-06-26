@@ -14,6 +14,7 @@ def commonPods
   pod 'RxKeyboard'
   pod 'RxViewController'
   pod 'Action'
+  pod 'NSObject+Rx'
   pod 'SwiftyBeaver'
   pod 'SwiftyUserDefaults'
 end

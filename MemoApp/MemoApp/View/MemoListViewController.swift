@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import NSObject_Rx
 
 class MemoListViewController: UIViewController, ViewModelBindableType {
 
     var viewModel: MemoListViewModel!
-
+    @IBOutlet weak var listTable: UITableView!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +23,15 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
     }
 
     func bindViewModel() {
-        <#code#>
+        viewModel.title
+            .drive(navigationItem.rx.title)
+            .disposed(by: rx.disposeBag)
+        
+        viewModel.memoList
+            .bind(to: listTable.rx.items(cellIdentifier: "MemoCell")) { row, memo, cell in
+                cell.textLabel?.text = memo.content
+            }
+            .disposed(by: rx.disposeBag)
     }
 
 }

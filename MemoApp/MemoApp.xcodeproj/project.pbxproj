@@ -21,6 +21,8 @@
 		0B31804C2867471A000DB9D5 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31804B2867471A000DB9D5 /* Scene.swift */; };
 		0B31804E2867494A000DB9D5 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31804D2867494A000DB9D5 /* SceneCoordinatorType.swift */; };
 		0B318050286749BD000DB9D5 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31804F286749BD000DB9D5 /* SceneCoordinator.swift */; };
+		0B31805228681BA4000DB9D5 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31805128681BA4000DB9D5 /* CommonViewModel.swift */; };
+		0B318055286822C7000DB9D5 /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B318053286822C7000DB9D5 /* Memo.xcdatamodeld */; };
 		0B953FC7286734030048154D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B953FC6286734030048154D /* AppDelegate.swift */; };
 		0B953FC9286734030048154D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B953FC8286734030048154D /* SceneDelegate.swift */; };
 		0B953FCE286734030048154D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B953FCC286734030048154D /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		0B31804B2867471A000DB9D5 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		0B31804D2867494A000DB9D5 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		0B31804F286749BD000DB9D5 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		0B31805128681BA4000DB9D5 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		0B318054286822C7000DB9D5 /* Memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memo.xcdatamodel; sourceTree = "<group>"; };
 		0B953FC3286734030048154D /* MemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B953FC6286734030048154D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B953FC8286734030048154D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				0B3180412867446E000DB9D5 /* MemoListViewModel.swift */,
 				0B31804328674482000DB9D5 /* MemoDetailViewModel.swift */,
 				0B31804528674496000DB9D5 /* MemoComposeViewModel.swift */,
+				0B31805128681BA4000DB9D5 /* CommonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				0B953FCF286734070048154D /* Assets.xcassets */,
 				0B953FD1286734070048154D /* LaunchScreen.storyboard */,
 				0B953FD4286734070048154D /* Info.plist */,
+				0B318053286822C7000DB9D5 /* Memo.xcdatamodeld */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 				0B31803428673DD6000DB9D5 /* Memo.swift in Sources */,
 				0B31804628674496000DB9D5 /* MemoComposeViewModel.swift in Sources */,
 				0B31804C2867471A000DB9D5 /* Scene.swift in Sources */,
+				0B318055286822C7000DB9D5 /* Memo.xcdatamodeld in Sources */,
 				0B31803A28673F18000DB9D5 /* MemoStorage.swift in Sources */,
 				0B31804428674482000DB9D5 /* MemoDetailViewModel.swift in Sources */,
 				0B31803C286743A2000DB9D5 /* MemoListViewController.swift in Sources */,
@@ -309,6 +316,7 @@
 				0B31804828674511000DB9D5 /* ViewModelBindableType.swift in Sources */,
 				0B953FC9286734030048154D /* SceneDelegate.swift in Sources */,
 				0B3180422867446E000DB9D5 /* MemoListViewModel.swift in Sources */,
+				0B31805228681BA4000DB9D5 /* CommonViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +534,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B318053286822C7000DB9D5 /* Memo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B318054286822C7000DB9D5 /* Memo.xcdatamodel */,
+			);
+			currentVersion = 0B318054286822C7000DB9D5 /* Memo.xcdatamodel */;
+			path = Memo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B953FBB286734030048154D /* Project object */;
 }
