@@ -9,9 +9,11 @@ def commonPods
   pod 'RxSwiftExt'
   pod 'RxOptional'
   pod 'RxDataSources'
+  pod 'RxCoreData'
   pod 'RxGesture'
   pod 'RxKeyboard'
   pod 'RxViewController'
+  pod 'Action'
   pod 'SwiftyBeaver'
   pod 'SwiftyUserDefaults'
 end
